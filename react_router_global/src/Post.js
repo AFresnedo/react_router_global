@@ -4,12 +4,12 @@ import Comment from './Comment';
 
 class Post extends Component {
   render() {
-    const allComments = this.props.comments;
+    const allComments = this.props.post.comments;
     return (
       <div className="App">
-        <h1>{ this.props.title }</h1>
-        <p>{ this.props.author }</p>
-        <p>{ this.props.body }</p>
+        <h1>{ this.props.post.title }</h1>
+        <p>{ this.props.post.author }</p>
+        <p>{ this.props.post.body }</p>
         <h3>Comments</h3>
 
         { allComments.map( item => {
