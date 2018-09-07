@@ -3,8 +3,13 @@ import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 // components
-import Post from './Post.js';
 import Landing from './Landing.js';
+import Post from './Post.js';
+import Food from './Food.js';
+import Movie from './Movie.js';
+import About from './About.js';
+
+
 
 
 const post = {
@@ -22,10 +27,16 @@ class App extends Component {
           <nav>
             <Link to='/'>Landing</Link>{' '}
             <Link to='/blog'>Blog</Link>{' '}
+            <Link to='/food'>Favorite Food</Link>{' '}
+            <Link to='/movie'>Favorite Movie</Link>{' '}
+            <Link to='/about'>About Me</Link>{' '}
           </nav>
           <Route exact path='/' component={Landing} />
           <Route path='/blog' component={
             () => (<Post post={post} />) } />
+          <Route path='/food' component={Food} />
+          <Route path='/movie' component={Movie} />
+          <Route path='/about' component={About} />
         </div>
       </Router>
     );
